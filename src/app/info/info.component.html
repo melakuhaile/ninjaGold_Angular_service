@@ -1,3 +1,19 @@
-<ul>
-  <li *ngFor = "let m of _dataService.messages">{{m}}</li>
-</ul>
+<!-- display the messages method cread in dataservice in listed format -->
+<div style="overflow:scroll">
+    <ul>
+        <li *ngFor = "let m of _dataService.messages">
+          {{m}}
+        </li> 
+    </ul>
+  
+</div>
+<style>
+  div{
+    width: 800px;
+    height:300px;
+    background-color: rgb(128, 109, 0)
+  }
+  li{
+    font-size: 25px;
+  }
+</style>

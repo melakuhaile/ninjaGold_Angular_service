@@ -10,15 +10,15 @@ export class PlacesComponent implements OnInit {
 
   constructor(private _dataService: DataService) { }
 
-  farm: number;
+  place: any;
 
   ngOnInit() {
   }
 
-  // coming from places.html (click)="gold_farm(...)
-  gold_farm(sender:string, min, max){
-    console.log ("in gold_farm", this.farm);
-    this.farm = this._dataService.farmGold(sender, min, max);
+  //by inceted the service method , created a method for places.component.ts
+  domath(name:string, min, max){
+    
+    this.place = this._dataService.Gold(name, min, max);
   }
 
 }
